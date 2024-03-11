@@ -23,7 +23,9 @@ buka file explorer windows
 
 mouse klik kanan, open with GIT LFS
 
-git
+git lfs clone https://github.com/SecretDiscorder/bimalog.git
+
+cd bimalog
 
 ## Cara Penggunaan
 1. **WINDOWS APPS EXE**
