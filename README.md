@@ -40,8 +40,11 @@ cd bimalog
         - Klik `bimalog.bat` dan tunggu selama 4 menit
         - Perhatikan file `PERHATIKAN!!.mp4`
         - Semoga Anda tersenyum :)
+     
+    Astaga susah banget jelasin nya
+   [SINI LINK ](https://github.com/SecretDiscorder/bimalog/releases/tag/bimalog) Tinggal download tuh 200 MB
 
-2. **DJANGO**
+3. **DJANGO**
     - Install RunScript Manual
         - Jalankan perintah berikut untuk menjalankan script:
             ```
@@ -52,7 +55,7 @@ cd bimalog
             127.0.0.1:8000
             ```
 
-3. **WEBSITE**
+4. **WEBSITE**
     - Ngetik
         - Jalankan perintah berikut untuk menginstal dependensi:
             ```
