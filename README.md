@@ -2,7 +2,7 @@
 
 root-project ### https://github.com/SecretDiscorder/bimalog
 
-Explained ### https://github.com/SecretDiscorder/bimalog/tree/main
+Explained ### https://github.com/SecretDiscorder/bimalog/blob/main
 
 ## Deskripsi
 Bima Blog Apps adalah aplikasi yang diremake menggunakan Blang Project dengan desain Burik. Aplikasi ini memiliki berbagai fitur yang dapat membantu pengguna dalam meWAH KAN segala sesuatu.
