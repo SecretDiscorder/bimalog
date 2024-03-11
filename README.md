@@ -1,6 +1,6 @@
 # Bima Blog Apps: New Blang-Project Remake with Burik Design
 
-root-project ### https://github.com/SecretDiscorder/bimalog/tree/master
+root-project ### https://github.com/SecretDiscorder/bimalog
 
 Explained ### https://github.com/SecretDiscorder/bimalog/tree/main
 
