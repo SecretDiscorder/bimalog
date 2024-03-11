@@ -1,8 +1,8 @@
 # Bima Blog Apps: New Blang-Project Remake with Burik Design
 
-root-project ### https://github.com/SecretDiscorder/bimalog
+git project ### https://github.com/SecretDiscorder/bimalog
 
-Explained ### https://github.com/SecretDiscorder/bimalog/blob/main
+Explained lfs ### https://github.com/SecretDiscorder/bimalog/blob/master
 
 ## Deskripsi
 Bima Blog Apps adalah aplikasi yang diremake menggunakan Blang Project dengan desain Burik. Aplikasi ini memiliki berbagai fitur yang dapat membantu pengguna dalam meWAH KAN segala sesuatu.
