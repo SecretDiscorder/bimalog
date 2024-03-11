@@ -25,7 +25,7 @@ install GIT LFS
 
 buka file explorer windows
 
-mouse klik kanan, open with GIT LFS
+mouse klik kanan, open with GIT BASH
 
 git lfs clone https://github.com/SecretDiscorder/bimalog.git
 
