@@ -27,6 +27,8 @@ buka file explorer windows
 
 mouse klik kanan, open with GIT BASH
 
+git lfs install
+
 git lfs clone https://github.com/SecretDiscorder/bimalog.git
 
 cd bimalog
