@@ -9,6 +9,10 @@ Bima Blog Apps adalah aplikasi yang diremake menggunakan Blang Project dengan de
 
 ## Ukuran
 Total ukuran: 2 GB Kau Install di Hosting Web Auto Meledak
+log install
+`
+Uploading LFS objects:  92% (17738/19261), 1.0 GB | 400 KB/s
+`
 
 ## Kategori
 - WINDOWS APPS EXE
