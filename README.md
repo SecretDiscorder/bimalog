@@ -1,7 +1,11 @@
 # Bima Blog Apps: New Blang-Project Remake with Burik Design
 
+root-project ### https://github.com/SecretDiscorder/bimalog/tree/master
+
+Explained ### https://github.com/SecretDiscorder/bimalog/tree/main
+
 ## Deskripsi
-Bima Blog Apps adalah aplikasi yang diremake menggunakan Blang Project dengan desain Burik. Aplikasi ini memiliki berbagai fitur yang dapat membantu pengguna dalam membuat blog dan berbagai tugas pemrograman.
+Bima Blog Apps adalah aplikasi yang diremake menggunakan Blang Project dengan desain Burik. Aplikasi ini memiliki berbagai fitur yang dapat membantu pengguna dalam meWAH KAN segala sesuatu.
 
 ## Ukuran
 Total ukuran: 2 GB Kau Install di Hosting Web Auto Meledak
