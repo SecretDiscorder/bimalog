@@ -36,6 +36,10 @@ git lfs clone https://github.com/SecretDiscorder/bimalog.git
 
 cd bimalog
 
+## UPDATE 
+
+git lfs pull
+
 ## Cara Penggunaan
 1. **WINDOWS APPS EXE**
     - Langsung RunScript di `dist/bimalog.bat Click`
