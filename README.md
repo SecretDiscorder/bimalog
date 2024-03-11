@@ -17,7 +17,7 @@ Total ukuran: 2 GB Kau Install di Hosting Web Auto Meledak
 - PYTHON APPS
 - PROGRAMING INTEGRATE
 
-## Penginstalan Only Windows dengan [GIT LFS](https://git-lfs.com/) , [GIT BASH](https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe)dan [PYTHON 64bit AMD](https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe)
+## Penginstalan Only Windows dengan [GIT LFS](https://git-lfs.com/) , [GIT BASH](https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe) dan [PYTHON 64bit AMD](https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe)
 
 Download GIT LFS dari [sini](https://github.com/git-lfs/git-lfs/releases/download/v3.4.1/git-lfs-windows-v3.4.1.exe)
 
