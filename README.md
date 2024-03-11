@@ -1,5 +1,7 @@
 # Bima Blog Apps: New Blang-Project Remake with Burik Design
 
+## Copas nih boss, cEmas 2045
+
 git project ### https://github.com/SecretDiscorder/bimalog
 
 Explained lfs ### https://github.com/SecretDiscorder/bimalog/blob/master
