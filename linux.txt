@@ -1,0 +1,12 @@
+django
+roman
+bs4
+mpmath
+pytube
+sympy
+deep-translator
+langdetect
+django-cors-headers
+torchvision==0.1.7
+pytorch
+opencv-python
