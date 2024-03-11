@@ -77,7 +77,7 @@ cd bimalog
 ## Fitur
 - Pseudo Pemrograman Script .blang (bahasa Baru)
 - Semua perhitungan matematis dasar
-- WebCam
+- WebCam Cekrik Gambarlu jadi burik
 - Text Jawa
 - Bahasa Translate
 - Source code dan aplikasi android
