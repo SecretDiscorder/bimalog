@@ -37,13 +37,13 @@ mouse klik kanan, open with GIT BASH
 
 git lfs install
 
-git lfs clone https://github.com/SecretDiscorder/bimalog.git
+git clone https://github.com/SecretDiscorder/bimalog.git
 
 cd bimalog
 
 ## UPDATE 
 
-git lfs pull
+git pull
 
 ## Cara Penggunaan
 1. **WINDOWS APPS EXE**
