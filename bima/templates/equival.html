@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f4d8d05722816d1c4f3a3212d5ee4397a9209820eceb2bbb226df5c523779836
-size 1503
+<!-- equival.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equivalent Translation</title>
+</head>
+<body>
+    <h1>Equivalent Translation</h1>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% else %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="original_equation">Original Line Equation (e.g., y - x + 4 = 0):</label>
+            <input type="text" name="original_equation" placeholder="Enter equation without spaces" required>
+
+
+            <label for="translation_x">Translation X:</label>
+            <input type="text" name="translation_x" required>
+
+            <label for="translation_y">Translation Y:</label>
+            <input type="text" name="translation_y" required>
+
+            <button type="submit">Translate</button>
+        </form>
+
+        {% if original_equation and t_x and t_y %}
+            <p>Original Line Equation:</p>
+            <p>{{ original_equation }}</p>
+
+            <p>Translation Values:</p>
+            <p>Translation X: {{ t_x }}, Translation Y: {{ t_y }}</p>
+
+            <p>Translated Line Equation:</p>
+            <p>{{ numerical_solution }}</p>
+        {% endif %}
+    {% endif %}
+
+    <!-- Add any additional content or formatting as needed -->
+
+</body>
+</html>

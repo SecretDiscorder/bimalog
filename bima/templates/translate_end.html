@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95ad05190a8c119a1e457d6d183e96a472b8ed64083e315e7eeeb64d9481c325
-size 1426
+<!-- translate_end.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translated Search Results</title>
+</head>
+<body>
+    <h1>Translated Search Results</h1>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% else %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="x_origin">Original X Coordinate:</label>
+            <input type="text" name="x_origin" value="{{ x_origin }}" required><br>
+
+            <label for="y_origin">Original Y Coordinate:</label>
+            <input type="text" name="y_origin" value="{{ y_origin }}" required><br>
+
+            <label for="translation_x">Translation X:</label>
+            <input type="text" name="translation_x" value="{{ translation_x }}" required><br>
+
+            <label for="translation_y">Translation Y:</label>
+            <input type="text" name="translation_y" value="{{ translation_y }}" required><br>
+
+            <button type="submit">Search Translated Coordinates</button>
+        </form>
+
+        <p>Translated Coordinates:</p>
+        <p>X: {{ x_translated }}, Y: {{ y_translated }}</p>
+    {% endif %}
+
+    <!-- Add any additional content or formatting as needed -->
+
+</body>
+</html>

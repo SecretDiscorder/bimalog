@@ -1,3 +1,116 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c5d7044b587c4f3498266e9a42e47ef8fc1c3167137a359a52f44ad78b1e408e
-size 2981
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+            text-align: center;
+            margin: 100px auto;
+			color: red;
+			background-size: 100%;
+		}
+        
+		#calculator1 {
+            width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+			text-align: left;
+        }
+		#calculator11 {
+            width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+			text-align: left;
+        }
+        #calculator {
+            width: 70%;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 500px;
+            font-size: 28px;
+            text-align: left;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        input[type="button"] {
+            width: 160px;
+            height: 100px;
+            font-size: 16px;
+            margin: 5px;
+			font-size: 16;
+            cursor: pointer;
+        }
+		button[type="submit"] {
+            width: 160px;
+            height: 100px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #ccc;
+        }
+		input[type="textarea"] {
+            width: 100%;
+            height: 500px;
+            font-size: 28px;
+            text-align: left;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+		select {
+            width: auto;
+            height: 40px;
+            font-size: 40px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+	<form method="post">
+	{% csrf_token %}
+	<input type="textarea" value="" name="number" id="number" required>
+	<select id="deret" name="deret">
+            {% for deret in derets %}
+                <option value="{{ deret }}" {% if deret == selected_resolution %}selected{% endif %}>{{ deret }}</option>
+            {% endfor %}
+			
+    </select><br>
+	<button type="submit"> Convert </button>
+	<textarea>{{ output_deret }}</textarea>
+	</form>
+</body>
+</html>

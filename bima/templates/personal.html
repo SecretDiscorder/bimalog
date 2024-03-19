@@ -1,3 +1,106 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8c091ce4ebd65451571ee7a9029486f3b35f570f82bf56a8795b77b099183432
-size 6082
+{% load static %}
+
+<html lang="en">
+
+<head>
+
+<style>
+		button {
+		    background-color: #000ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+		}
+</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bima Adhi Pratama Kharis - Personal Blog Website</title>
+    <meta name="title" content="Wren - Personal Blog Website">
+    <meta name="description" content="This is a blog html template made by codewithsadee">
+ 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <link rel="preload" as="image" href="{% static 'assets/images/hero-banner.png' %}">
+    <link rel="preload" as="image" href="{% static 'assets/images/pattern-2.svg' %}">
+    <link rel="preload" as="image" href="{% static 'assets/images/pattern-3.svg' %}">
+</head>
+
+<body id="top">
+    
+    <header class="header" data-header>
+        <div class="container"> <a href="#" class="logo"> <img src="{% static 'assets/images/logo.svg' %}" width="119" height="37" alt="Wren logo"> </a>
+            <nav class="navbar" data-navbar>
+                <div class="navbar-top"> <a href="#" class="logo"> <img src="{% static 'assets/images/logo.svg' %}" width="119" height="37" alt="Wren logo"> </a> <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button> </div>
+
+                <div class="navbar-list">
+                    <ul class="link-list">
+                        <li> <a href="#" class="navbar-list-link hover-1" data-nav-toggler>Profile</a> </li>
+                        <li> <a href="{% static 'jaya.pdf' %}" class="navbar-list-link hover-1" data-nav-toggler>Documentation</a> </li>
+                        <li> <a href="https://github.com/SecretDiscorder" class="navbar-list-link hover-1" data-nav-toggler>Project</a> </li>
+                        <li> <a href="profile/" class="navbar-list-link hover-1" data-nav-toggler>Achievement</a> </li>
+                        <!--<li> <a href="{% static '2045.pdf' %}" class="navbar-list-link hover-1" data-nav-toggler>Books</a> </li> -->
+                        <li> <a href="project/" class="navbar-list-link hover-1" data-nav-toggler>CLOSED PROJECT</a> </li>
+                        <li> <a href="base/" class="navbar-list-link hover-1" data-nav-toggler>My Works</a> </li>
+                    </ul>
+                </div>
+                <p class="copyright-text"> Copyright 28/2/2007 © PrataDev Bima - Personal Blog Template. Developed by SecretDiscorder </p>
+            </nav> <a href="profile/" class="btn btn-primary">Profile</a> <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="home" aria-label="home">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Hello Everyone!</p>
+                <h1 class="headline headline-1 section-title"> I’m <span class="span">Bima Adhi Pratama Kharis</span> </h1>
+                <p class="hero-text"> Seorang Villain dari Masa Antah Berantah. Bima as Mr. Bipo The SecretDiscorder</p>
+						<p class="card-text"> Hello, This is my documentation about my life </p>
+
+	
+                <button class="btn btn-primary"><a href="profile"> <span class="span">Goto To Profiles</span></a><br>
+                <b>OR</b><br>
+                <a href="base/" class="btn btn-primary">My Apps</a>
+                        <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </button>
+            </div>
+            <div class="hero-banner"> <img src="{% static 'assets/images/hero-banner.png' %}" width="327" height="490" alt="" class="w-100"> <img src="{% static 'assets/images/pattern-2.svg' %}" width="27" height="26" alt="shape" class="shape shape-1"> <img src="{% static 'assets/images/pattern-3.svg' %}" width="27" height="26" alt="shape" class="shape shape-2"> </div> <img src="{% static 'assets/images/shadow-1.svg' %}" width="500" height="800" alt="" class="hero-bg hero-bg-1"> <img src="{% static 'assets/images/shadow-2.svg' %}" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+   						
+<button><a href="{% static 'MyBrowser.apk' %}"> Browser Android </a></button>
+	<button><a href="{% static 'EXAMBRO.apk' %}">  EXAMBRO </a></button>
+    </div>
+
+
+	
+    </section>
+
+                <div class="footer-bottom">
+                    <p class="copyright"> &copy; Developed by <a href="https://github.com/SecretDiscorder" class="copyright-link">SecretDiscorder.</a> </p>
+                    <ul class="social-list">
+                        <li> <a href="https://youtube.com/@BimaSeven/" class="social-link">
+                                <ion-icon name="logo-youtube"></ion-icon> <span class="span">Youtube</span>
+                            </a> </li> <!-- Add other social media links here -->
+                    </ul>
+                </div>
+ <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+    </a>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

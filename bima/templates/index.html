@@ -1,3 +1,176 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c41c58df646ad345b4cdd702c92df50ede5a6f3a576696380b41588d2db544bc
-size 5514
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdn.tiny.cloud/1/au7jtiu4kixba7aas817ehrwn82whplwo43q6b75klo7wa9s/tinymce/5/tinymce.min.js" reffererpolicy="origin"></script>
+    <script>
+tinymce.init({
+  selector: 'textarea',
+  advcode_inline: true,
+  plugins: 'powerpaste casechange searchreplace autolink directionality visualblocks visualchars image link media mediaembed codesample table charmap pagebreak nonbreaking anchor tableofcontents insertdatetime advlist lists checklist wordcount tinymcespellchecker editimage help formatpainter permanentpen charmap linkchecker emoticons advtable export autosave advcode fullscreen',  toolbar: 'undo redo print spellcheckdialog formatpainter | fontfamily fontsize | bold italic underline forecolor backcolor | link image | alignleft aligncenter alignright alignjustify lineheight | checklist bullist numlist outdent indent | removeformat | codesample | code | formatselect',
+  menubar: 'tools',
+  toolbar: "undo redo print spellcheckdialog formatpainter | blocks fontfamily fontsize | bold italic underline forecolor backcolor | link image | alignleft aligncenter alignright alignjustify | code",
+  codesample_languages: [
+    { text: 'HTML/XML', value: 'markup' },
+    { text: 'JavaScript', value: 'javascript' }
+  ],
+  codesample_global_prismjs: true,
+setup: function(ed) {
+    ed.on('keydown', function(event) {
+        if (event.keyCode == 9) { // tab pressed
+          if (event.shiftKey) {
+            ed.execCommand('Outdent');
+          }
+          else {
+            ed.execCommand('Indent');
+          }
+
+          event.preventDefault();
+          return false;
+        }
+    });
+}
+});
+
+    </script>
+    <style>
+	
+input {
+	text-align: center;
+	align: 0px auto 0px auto;
+    background-color: green;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    transition: transform 0.2s;
+	color: white;
+	margin: 0px auto 0px auto;
+}
+
+input a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+input a:hover {
+    background-color: #0056b3;
+}
+
+        body {
+            margin: auto;
+			color: red;
+			background: #0f3854;
+			background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
+			background-size: 100%;
+			align: 0px auto 0px auto;
+			text-align: center;
+            padding: 0;
+        }
+		h1 {
+			text-align: center;
+		}
+        .code-container {
+            display: flex;
+        }
+
+        .line-numbers {
+            counter-reset: line;
+            padding-right: 10px; /* Adjust this based on your preference */
+            font-size: 12px;
+            line-height: 20px;
+            color: #555; /* Adjust color based on your preference */
+        }
+
+        .line-numbers span {
+            counter-increment: line;
+            display: block;
+        }
+
+        .textarea-container {
+            position: relative;
+            width: 100%;
+        }
+
+        textarea {
+            resize: none;
+            margin-top: -2px;
+            padding-left: 92px;
+            padding-right: 70px;
+            width: 100%;
+            background-color: unset;
+            box-sizing: border-box;
+            color: transparent;
+            position: absolute;
+            border: none;
+            tab-size: 8;
+            outline: none;
+            overflow: auto hidden;
+            height: 1500px;
+            font-size: 12px;
+            line-height: 20px;
+            overflow-wrap: normal;
+            overscroll-behavior-x: none;
+            white-space: pre;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<h1> Blang Programming </h1>
+<p align="center">main.blang</p>
+<form method="post" action="{% url 'blang' %}">
+    {% csrf_token %}
+	    <input type="submit" value="Run Code">
+    <div class="code-container">
+
+            <!-- Use a loop to generate line numbers dynamically based on the number of lines in your code -->
+
+        <div class="textarea-container">
+            <textarea name="input_code" id="textarea" oninput="updateLineNumbers()">CETAK("HALLO DUNIA")</textarea>
+        </div>
+
+    </div>
+    <br>
+
+</form>
+
+<script>
+    function updateLineNumbers() {
+        // You may need to adjust this JavaScript function based on your specific requirements
+        var textarea = document.getElementById("textarea");
+        var lineNumbers = document.querySelector(".line-numbers");
+        var lines = textarea.value.split("\n").length;
+
+        lineNumbers.innerHTML = "";
+        for (var i = 1; i <= lines; i++) {
+            var span = document.createElement("span");
+            span.textContent = i;
+            lineNumbers.appendChild(span);
+        }
+    }
+
+    // Call the function initially to set up line numbers
+    updateLineNumbers();
+</script>
+    <div class="code-container">
+	<div class="textarea-container">
+   {% if output_result %}
+      <font size="9"><label>Output:</label></font>
+      <font size="9"><label>{{ output_result|safe }}</label></font>
+	  <br>
+	  <font size="9"><label>Output:</label></font></br>
+	  <font size="9"><label>{{ output|safe }}</label></font>
+   {% endif %}
+	</div>
+    </div>
+</body>
+</html>

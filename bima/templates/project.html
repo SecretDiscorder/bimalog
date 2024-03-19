@@ -1,3 +1,105 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48f2337d2807d1e76a831a731cb15a4dbce78ad622c4ebfe1dfc8987eeeeb213
-size 3556
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri</title>
+    <style>
+        /* Style untuk galeri */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+		button {
+		    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+		}
+
+.gh-fullwidth{
+width: 100%;
+}
+.gh-fit{
+
+}
+        iframe {
+        display: block;
+        background: #000;
+        border: none;
+        height: 100vh;
+        width: 100vw;
+    }
+        /* Style untuk iframe */
+        .github-iframe {
+            width: 100%;
+            height: 1000;
+            border: none;
+        }
+		body {
+            font-family: Arial, sans-serif;
+			background: #0f3854;
+			background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%);
+			background-size: 100%;
+            margin: 0;
+            padding: 0;
+			color: white;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<script>
+function fit() {
+    var iframes = document.querySelectorAll("iframe.gh-fit")
+
+    for(var id = 0; id < iframes.length; id++) {
+        var win = iframes[id].contentWindow
+        var doc = win.document
+        var html = doc.documentElement
+        var body = doc.body
+        var ifrm = iframes[id] // or win.frameElement
+
+        if(body) {
+            body.style.overflowX = "scroll" // scrollbar-jitter fix
+            body.style.overflowY = "hidden"
+        }
+        if(html) {
+            html.style.overflowX = "scroll" // scrollbar-jitter fix
+            html.style.overflowY = "hidden"
+            var style = win.getComputedStyle(html)
+            ifrm.width = parseInt(style.getPropertyValue("width")) // round value
+            ifrm.height = parseInt(style.getPropertyValue("height"))
+        }
+    }
+
+    requestAnimationFrame(fit)
+}
+addEventListener("load", requestAnimationFrame.bind(this, fit))
+</script>
+
+<body>
+    <h2>Galeri Gambar</h2>
+
+        <img src="{% static 'Screen1.jpeg' %}" alt="Gambar 1" width="100%" height="100%"> </br>
+        <img src="{% static 'Screen1.png' %}" alt="Gambar 2" width="100%" height="100%"> </br>
+        <img src="{% static 'Screen2.jpeg' %}" alt="Gambar 1" width="100%" height="100%"> </br>
+        <img src="{% static 'Screen2.png' %}" alt="Gambar 2" width="100%" height="100%"> </br>
+		<img src="{% static 'Screen3.jpeg' %}" alt="Gambar 1" width="100%" height="100%"> </br>
+        <img src="{% static 'Screen3.png' %}" alt="Gambar 2" width="100%" height="100%"> </br>
+		<img src="{% static 'Screen5.jpeg' %}" alt="Gambar 1" width="100%" height="100%"> </br>
+        <img src="{% static 'Screen5.png' %}" alt="Gambar 2" width="100%" height="100%"> </br>
+
+
+
+	<b> com/bima/bimaaix </b>
+     <iframe class="gh-fit gh-fullwidth" src="{% static 'BimaAix.java.pdf' %}" title="GitHub Repository"></iframe></br>
+	      <iframe class="gh-fit gh-fullwidth" src="{% static 'WView.java.pdf' %}" title="GitHub Repository"></iframe></br>
+	      <iframe class="gh-fit gh-fullwidth" src="{% static 'AutoFitTextureView.java.pdf' %}" title="GitHub Repository"></iframe></br>
+    <!-- Ganti "username/repository" dengan URL repository GitHub yang ingin Anda masukkan -->
+
+</body>
+</html>

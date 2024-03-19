@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Qur'an Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        input {
+            margin-bottom: 10px;
+			height: 64px;
+			width: 150px;
+			font-size: 30px;
+        }
+        .ayah {
+            margin-bottom: 10px;
+        }
+        .translation {
+            font-style: italic;
+            color: #666;
+        }
+        .tafsir {
+            color: #333;
+        }
+		
+        .line-numbers {
+            counter-reset: line;
+            padding-right: 10px; /* Adjust this based on your preference */
+            font-size: 12px;
+            line-height: 20px;
+            color: #555; /* Adjust color based on your preference */
+        }
+
+        .line-numbers span {
+            counter-increment: line;
+            display: block;
+        }
+
+        .textarea-container {
+            position: relative;
+            width: 100%;
+        }
+textarea {
+    /* Properti lain */
+    direction: rtl; /* Atur arah teks dari kanan ke kiri */
+
+
+    resize: none;
+    margin-top: -2px;
+    padding-left: 92px;
+    padding-right: 70px;
+    width: 100%;
+    background-color: unset;
+    box-sizing: border-box;
+    color: transparent;
+    border: none;
+    tab-size: 8;
+    outline: none;
+    overflow: auto hidden;
+    height: 1000px;
+    font-size: 500px;
+    line-height: 20px;
+    overflow-wrap: normal;
+    overscroll-behavior-x: none;
+    white-space: pre; /* Menjaga spasi dan baris baru di dalam teks */
+    z-index: 1;
+}
+
+    </style>
+		<script src="https://cdn.tiny.cloud/1/au7jtiu4kixba7aas817ehrwn82whplwo43q6b75klo7wa9s/tinymce/5/tinymce.min.js" reffererpolicy="origin"></script>
+    <script>
+tinymce.init({
+  selector: 'textarea',
+  advcode_inline: true,
+  plugins: 'fontsize print powerpaste casechange searchreplace autolink directionality visualblocks visualchars image link media mediaembed codesample table charmap pagebreak nonbreaking anchor tableofcontents insertdatetime advlist lists checklist wordcount tinymcespellchecker editimage help formatpainter permanentpen charmap linkchecker emoticons advtable export autosave advcode fullscreen',
+  menubar: 'tools',
+  toolbar: 'fontsizeselect print undo redo print spellcheckdialog formatpainter | fontfamily fontsize | bold italic underline forecolor backcolor | link image | alignleft aligncenter alignright alignjustify | code | codesample',
+  codesample_languages: [
+    { text: 'HTML/XML', value: 'markup' },
+    { text: 'JavaScript', value: 'javascript' }
+  ],
+  fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt', // Pilihan ukuran font yang tersedia
+  height: 500,
+
+  codesample_global_prismjs: true,
+  setup: function(editor) {
+    editor.on('keydown', function(event) {
+      if (event.keyCode == 9) { // tab pressed
+        if (event.shiftKey) {
+          editor.execCommand('Outdent');
+        } else {
+          editor.execCommand('Indent');
+        }
+
+        event.preventDefault();
+        return false;
+      }
+    });
+
+    // Membuat fungsi untuk menyisipkan nomor ayat sebelum setiap ayat
+    editor.on('BeforeSetContent', function(event) {
+      event.content = event.content.replace(/<p>(.*?)<\/p>/g, function(match, p1) {
+        return '<p>' + editor.selection.getStart().parentNode.parentNode.dataset.lineNumber + '. ' + p1 + '</p>';
+      });
+    });
+  }
+});
+
+
+    </script>
+</head>
+<body>
+	<form method="post">
+	{% csrf_token %}    
+	<b>MASUKAN NOMOR SURAH Al-Quran
+    <div class="surah-title"><input id="surah-title"type="number" name="idsurah" value="1"></div></br>
+	<input type="submit" value="SUBMIT">
+    <div class="ayah"><textarea id="textarea">{{ ayah }}</textarea></div></br>
+    <div class="translation"><textarea id="textarea">{{ translate }}</textarea></div>
+    <!-- Add more ayahs, translations, and tafsirs here -->
+	</form>
+</body>
+</html>

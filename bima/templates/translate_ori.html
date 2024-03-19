@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e54fe07b12592923f0b497b42028305a4864df7ff0150710de20522537c2a57a
-size 996
+
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% else %}
+        <form method="post">
+            {% csrf_token %}
+			    <h2>Search Original Coordinates</h2>
+            <label for="tx">Translated X Coordinate:</label>
+            <input type="text" name="tx" value="{{ x_translated }}" required><br>
+
+            <label for="ty">Translated Y Coordinate:</label>
+            <input type="text" name="ty" value="{{ y_translated }}" required><br>
+
+            <label for="tx_value">Translation X Value:</label>
+            <input type="text" name="tx_value" value="{{ tx }}" required><br>
+
+            <label for="ty_value">Translation Y Value:</label>
+            <input type="text" name="ty_value" value="{{ ty }}" required><br>
+
+            <button type="submit">Search Original Coordinates</button>
+        </form>
+
+        <p>Original Coordinates:</p>
+        <p>X: {{ x_original }}, Y: {{ y_original }}</p>
+    {% endif %}

@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9c8c17f7f7c3a285451f52fd1fbfba66c0a724039ca87c219dff3d8812fa021c
-size 1445
+<!-- translate.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation</title>
+</head>
+<body>
+    <h2>Search Original Coordinates</h2>
+	<a href="./translate_ori">Default Translate Coordinate Search</a>
+
+    <form action="{% url 'translate' %}" method="post">
+        {% csrf_token %}
+        <h2>Translation</h2>
+        <label for="x">X Coordinate:</label>
+        <input type="text" name="x" value="{{ x }}" required>
+        <br>
+
+        <label for="y">Y Coordinate:</label>
+        <input type="text" name="y" value="{{ y }}" required>
+        <br>
+
+        <label for="tx">Translation X:</label>
+        <input type="text" name="tx" value="{{ tx }}" required>
+        <br>
+
+        <label for="ty">Translation Y:</label>
+        <input type="text" name="ty" value="{{ ty }}" required>
+        <br>
+
+        <input type="submit" value="Translate">
+    </form>
+<h2>Translated search</h2>
+<a href="./translate_end">Translated-search</a>
+<h2>Translated equival search</h2>
+<a href="./equival">Translated-search</a>
+    {% if x and y %}
+        <h2>Results</h2>
+        <p>Default Coordinates: ({{ x }}, {{ y }})</p>
+    {% endif %}
+
+    {% if x and y and x_translated and y_translated %}
+        <p>Translated Point: {{ translated_point }}</p>
+    {% endif %}
+
+</body>
+</html>
