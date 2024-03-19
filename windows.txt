@@ -7,6 +7,3 @@ sympy
 deep-translator
 langdetect
 django-cors-headers
-torchvision
-torch
-opencv-python
